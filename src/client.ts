@@ -70,12 +70,19 @@ export default class Client extends EventEmitter {
   async join(rid: string, info = { name: 'Guest' }) {
     this.rid = rid;
     try {
-      const data = await this.dispatch.request('join', {
+      const {data} = await this.dispatch.request('join', {
         rid: this.rid,
         uid: this.uid,
         info,
       });
       log.info('join success: result => ' + JSON.stringify(data));
+      if ('pubs' in data) {
+        for (const pub of data['pubs']) {
+          console.log('pub', pub);
+          this.knownStreams.set(pub.mid, objToStrMap(pub.tracks));
+        }
+      }
+      return data;
     } catch (error) {
       log.error('join reject: error =>' + error);
     }

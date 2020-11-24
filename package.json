@@ -1,54 +1,54 @@
 {
-  "name": "ion-sdk-js",
-  "version": "0.3.7",
-  "description": "A js sdk for ion sfu",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "lib/**/*"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc -w",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
-  },
-  "author": "pion",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "7.9.6",
-    "@babel/plugin-proposal-class-properties": "7.8.3",
-    "@babel/plugin-transform-runtime": "7.9.6",
-    "@babel/preset-env": "7.9.6",
-    "@babel/preset-react": "7.9.4",
-    "@babel/runtime": "7.9.6",
-    "@types/events": "3.0.0",
-    "@types/sdp-transform": "2.4.3",
-    "@types/uuid": "7.0.4",
-    "@types/webrtc": "0.0.26",
-    "prettier": "2.0.5",
-    "tslint": "6.1.2",
-    "tslint-config-prettier": "1.18.0",
-    "typescript": "3.9.3"
-  },
-  "dependencies": {
-    "events": "^3.0.0",
-    "lodash": "^4.17.15",
-    "loglevel": "^1.6.7",
-    "protoo-client": "^4.0.3",
-    "sdp-transform": "^2.13.0",
-    "uuid": "^8.0.0"
-  },
-  "keywords": [
-    "pion",
-    "sfu",
-    "webrtc",
-    "ion",
-    "js"
-  ]
+    "name": "@caves/ion-sdk-js",
+    "version": "0.3.7",
+    "description": "A js sdk for ion sfu",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "files": [
+        "lib/**/*"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc -w",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm run lint",
+        "preversion": "npm run lint",
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "author": "pion",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "7.9.6",
+        "@babel/plugin-proposal-class-properties": "7.8.3",
+        "@babel/plugin-transform-runtime": "7.9.6",
+        "@babel/preset-env": "7.9.6",
+        "@babel/preset-react": "7.9.4",
+        "@babel/runtime": "7.9.6",
+        "@types/events": "3.0.0",
+        "@types/sdp-transform": "2.4.3",
+        "@types/uuid": "7.0.4",
+        "@types/webrtc": "0.0.26",
+        "prettier": "2.0.5",
+        "tslint": "6.1.2",
+        "tslint-config-prettier": "1.18.0",
+        "typescript": "3.9.3"
+    },
+    "dependencies": {
+        "events": "^3.0.0",
+        "lodash": "^4.17.15",
+        "loglevel": "^1.6.7",
+        "protoo-client": "^4.0.3",
+        "sdp-transform": "^2.13.0",
+        "uuid": "^8.0.0"
+    },
+    "keywords": [
+        "pion",
+        "sfu",
+        "webrtc",
+        "ion",
+        "js"
+    ]
 }
