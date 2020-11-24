@@ -77,7 +77,8 @@ export default class Client extends EventEmitter {
       });
       log.info('join success: result => ' + JSON.stringify(data));
       if ('pubs' in data) {
-        for (const pub of data.pubs) {
+        const dataPubs = (data as {pubs:[{mid:string, tracks:MediaStreamTrack[]}]})
+        for (const pub of dataPubs.pubs) {
           log.info('join pub', pub);
           this.knownStreams.set(pub.mid, objToStrMap(pub.tracks));
         }
