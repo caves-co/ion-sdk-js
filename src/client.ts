@@ -70,7 +70,7 @@ export default class Client extends EventEmitter {
   async join(rid: string, info = { name: 'Guest' }) {
     this.rid = rid;
     try {
-      const {data} = await this.dispatch.request('join', {
+      const data = await this.dispatch.request('join', {
         rid: this.rid,
         uid: this.uid,
         info,
